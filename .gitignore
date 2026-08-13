@@ -1,0 +1,7 @@
+_build/
+.moon-securitytxt-build/
+*.zip
+*.tmp
+*.log
+.DS_Store
+Thumbs.db

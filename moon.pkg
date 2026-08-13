@@ -1,0 +1,15 @@
+import {
+  "moonbitlang/core/array",
+  "moonbitlang/core/bytes",
+  "moonbitlang/core/char",
+  "moonbitlang/core/encoding/utf8",
+  "moonbitlang/core/hashmap",
+  "moonbitlang/core/int64",
+  "moonbitlang/core/option",
+  "moonbitlang/core/string",
+}
+
+import {
+  "moonbitlang/core/debug",
+  "moonbitlang/core/test",
+} for "test"

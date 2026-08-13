@@ -1,0 +1,5 @@
+pkgtype(kind: "executable")
+
+import {
+  "moyunijieshi1/moon-securitytxt" @lib,
+}
