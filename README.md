@@ -5,7 +5,7 @@ Module: moyunijieshi1/moon-securitytxt
 Version: 0.1.0-dev
 Status: GitHub development
 Repository: https://github.com/moyunijieshi1/moon-securitytxt
-Mooncakes: not published
+Mooncakes: published as moyunijieshi1/moon-securitytxt@0.1.0-dev
 Maintainer: 谭海杰 <wx20061011@qq.com>
 ```
 
@@ -113,5 +113,9 @@ Appendix A.1 example is reproduced as a test fixture).
 ## Project status
 
 Maintained by 谭海杰 (`moyunijieshi1`, `wx20061011@qq.com`) at
-https://github.com/moyunijieshi1/moon-securitytxt. The module remains a
-`0.1.0-dev` development release and has not been published to Mooncakes.
+https://github.com/moyunijieshi1/moon-securitytxt. Version `0.1.0-dev` is
+available from Mooncakes:
+
+```console
+moon add moyunijieshi1/moon-securitytxt@0.1.0-dev
+```
