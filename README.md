@@ -33,6 +33,16 @@ generator, freshness and audit. GitHub development package
 - **CLI** (`securitytxt-tool`) with `parse`, `validate`, `fresh`,
   `generate`, `audit` and `stats` commands, plus `--version`/`--help`.
 
+## Field overview
+
+| Field | Cardinality | Purpose |
+| --- | --- | --- |
+| `Contact` | One or more | Ordered reporting channels; the first is preferred |
+| `Expires` | Exactly one | Time after which the document is stale |
+| `Preferred-Languages` | Zero or one | Equally preferred report languages |
+| Other standard fields | Optional, repeatable | Policy, keys, acknowledgments, hiring and canonical locations |
+| Extension fields | Optional, repeatable | Forward-compatible registered or private information |
+
 ## What it does not do (by design)
 
 - No HTTP client, DNS, TLS, PGP signature/key verification, certificate
