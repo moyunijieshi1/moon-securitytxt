@@ -31,6 +31,14 @@ records armor headers, but performs no cryptographic check, and the
 state can never become `verified` through this library. Downstream
 code must not treat `SignedUnverified` as an authenticity guarantee.
 
+## Consumer checklist
+
+Before acting on a parsed document, consumers should validate it, check
+freshness with a trusted `now`, compare every declared Canonical location with
+the actual retrieval URI, and independently establish trust in contacts and
+keys. Validation reports syntax and RFC constraints; it does not establish
+ownership, authorization, availability, or cryptographic authenticity.
+
 ## Parser hardening
 
 - Strict UTF-8 validation (rejects overlong encodings, surrogates,
