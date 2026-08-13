@@ -35,6 +35,13 @@ validate_all(document) -> Array[SecurityTxtError]
 in deterministic order (per-field value errors in document order, then
 required fields, then cardinality).
 
+## Ordering guarantees
+
+The parser preserves source field order. `contacts()` and `canonicals()` return
+values in that same order, and `preferred_contact()` returns the first Contact
+without inventing a URI-scheme preference. Serialization retains entry order;
+the builder uses its documented fixed order for deterministic generation.
+
 ## Freshness
 
 ```moonbit
