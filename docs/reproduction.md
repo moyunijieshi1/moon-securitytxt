@@ -26,3 +26,17 @@ All verification steps passed.
 
 No Git, login, publishing, HTTP, DNS, TLS, or signature-verification operation
 is part of reproduction.
+
+## Focused checks
+
+During development, individual targets can be checked without running the full
+gate:
+
+```powershell
+moon fmt --check
+moon check --target wasm-gc
+moon test --target wasm-gc
+```
+
+Run `verify_all.ps1` before release or publication because only the full gate
+covers JavaScript, native, CLI smoke tests, examples, metrics, and packaging.
