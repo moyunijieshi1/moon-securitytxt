@@ -3,9 +3,9 @@
 ```text
 Module: moyunijieshi1/moon-securitytxt
 Version: 0.1.0
-Status: final-review release candidate
+Status: final release
 Repository: https://github.com/moyunijieshi1/moon-securitytxt
-Mooncakes: release target moyunijieshi1/moon-securitytxt@0.1.0
+Mooncakes: published as moyunijieshi1/moon-securitytxt@0.1.0
 Maintainer: 谭海杰 (@moyunijieshi1)
 ```
 
@@ -113,8 +113,8 @@ Appendix A.1 example is reproduced as a test fixture).
 ## Project status
 
 Maintained by 谭海杰 (`moyunijieshi1`) at
-https://github.com/moyunijieshi1/moon-securitytxt. Version `0.1.0` is the
-final-review release target for Mooncakes:
+https://github.com/moyunijieshi1/moon-securitytxt. Version `0.1.0` is
+published on Mooncakes:
 
 ```console
 moon add moyunijieshi1/moon-securitytxt@0.1.0
