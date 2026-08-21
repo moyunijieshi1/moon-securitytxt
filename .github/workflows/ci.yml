@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: hustcer/setup-moonbit@v1.22
+      - name: Toolchain
+        run: moon version --all
+      - name: Format
+        run: moon fmt --check
+      - name: Public API
+        run: moon info
+      - name: Strict check
+        run: moon check --target all --deny-warn
+      - name: Build
+        run: moon build --target all
+      - name: Strict tests
+        run: moon test --target all --deny-warn
+      - name: CLI smoke test
+        run: moon run ./cmd/securitytxt-tool --target wasm-gc -- version
+      - name: Runnable examples
+        shell: bash
+        run: |
+          set -euo pipefail
+          moon run ./examples/parse --target wasm-gc
+          moon run ./examples/validate --target wasm-gc
+          moon run ./examples/freshness --target wasm-gc
+          moon run ./examples/generate --target wasm-gc
+          moon run ./examples/audit --target wasm-gc
+      - name: Metrics and package manifest
+        run: |
+          python scripts/count_code.py
+          moon package --list

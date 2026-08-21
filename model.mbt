@@ -383,5 +383,5 @@ pub fn SecurityField::is_singleton(self : SecurityField) -> Bool {
 ///|
 /// Library version string, used by the CLI's `--version`.
 pub fn library_version() -> String {
-  "0.1.0-dev"
+  "0.1.0"
 }

@@ -2,16 +2,16 @@
 
 ```text
 Module: moyunijieshi1/moon-securitytxt
-Version: 0.1.0-dev
-Status: GitHub development
+Version: 0.1.0
+Status: final-review release candidate
 Repository: https://github.com/moyunijieshi1/moon-securitytxt
-Mooncakes: published as moyunijieshi1/moon-securitytxt@0.1.0-dev
-Maintainer: 谭海杰 <wx20061011@qq.com>
+Mooncakes: release target moyunijieshi1/moon-securitytxt@0.1.0
+Maintainer: 谭海杰 (@moyunijieshi1)
 ```
 
 A pure-MoonBit RFC 9116 `security.txt` toolkit: parser, validator,
 generator, freshness and audit. GitHub development package
-`moyunijieshi1/moon-securitytxt`, version `0.1.0-dev`.
+`moyunijieshi1/moon-securitytxt`, version `0.1.0`.
 
 ## What it does
 
@@ -95,7 +95,7 @@ moon run ./cmd/securitytxt-tool --target wasm-gc -- fresh --text "..." --now 202
 powershell -File scripts/verify_all.ps1
 ```
 
-Runs `moon clean`, `moon fmt --check`, check+test on wasm-gc, js and
+Runs `moon clean`, `moon fmt --check`, warning-free check+test on wasm-gc, js and
 native, CLI smoke tests, all examples, code metrics and
 `moon package --list`, ending with `All verification steps passed.`
 
@@ -112,10 +112,10 @@ Appendix A.1 example is reproduced as a test fixture).
 
 ## Project status
 
-Maintained by 谭海杰 (`moyunijieshi1`, `wx20061011@qq.com`) at
-https://github.com/moyunijieshi1/moon-securitytxt. Version `0.1.0-dev` is
-available from Mooncakes:
+Maintained by 谭海杰 (`moyunijieshi1`) at
+https://github.com/moyunijieshi1/moon-securitytxt. Version `0.1.0` is the
+final-review release target for Mooncakes:
 
 ```console
-moon add moyunijieshi1/moon-securitytxt@0.1.0-dev
+moon add moyunijieshi1/moon-securitytxt@0.1.0
 ```

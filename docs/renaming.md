@@ -7,7 +7,6 @@ Maintainer:
 
 - Name: 谭海杰
 - GitHub: `moyunijieshi1`
-- Email: `wx20061011@qq.com`
 
 All package imports, CLI version output, and documentation use the same module
 name. Future namespace changes must update `moon.mod`, every `moon.pkg`, the CLI

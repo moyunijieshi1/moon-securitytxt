@@ -1,11 +1,11 @@
 # Changelog
 
 All notable changes to `moyunijieshi1/moon-securitytxt` are documented here.
-The version scheme is `0.1.0-dev` (unreleased, development).
+The project follows semantic versioning.
 
-## 0.1.0-dev — unreleased
+## 0.1.0 — 2026-08-21
 
-Initial development version.
+First stable release and OSC 2026 final-review submission.
 
 ### Added
 
@@ -43,6 +43,8 @@ Initial development version.
 - Test suite: 102 named tests plus deterministic property grids and
   truncation-fuzz cases (every input returns `Ok` or a structured `Err`;
   the parser never crashes). Green on wasm-gc, js and native.
+- Warning-free release gate, GitHub Actions verification and reproducible
+  CLI/example/package checks.
 
 ### Deliberately out of scope
 

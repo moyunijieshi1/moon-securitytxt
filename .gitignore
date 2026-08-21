@@ -1,4 +1,5 @@
 _build/
+pkg.generated.mbti
 .moon-securitytxt-build/
 *.zip
 *.tmp

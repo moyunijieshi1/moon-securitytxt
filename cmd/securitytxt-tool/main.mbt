@@ -43,7 +43,7 @@ fn run_cli(args : Array[String]) -> Unit {
 
 ///|
 fn print_usage() -> Unit {
-  println("securitytxt-tool 0.1.0-dev — RFC 9116 security.txt toolkit")
+  println("securitytxt-tool 0.1.0 — RFC 9116 security.txt toolkit")
   println(
     "usage: securitytxt-tool <parse|validate|fresh|generate|audit|stats> --text <document>",
   )

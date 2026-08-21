@@ -1,5 +1,5 @@
 // OpenPGP cleartext-signature envelope detection and extraction (RFC 9116 2.3,
-// RFC 4880 7). v0.1.0-dev performs NO verification: a detected envelope is
+// RFC 4880 7). v0.1.0 performs NO verification: a detected envelope is
 // SignedUnverified — never verified. See docs/limitations.md.
 
 ///|

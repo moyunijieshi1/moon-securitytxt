@@ -15,8 +15,8 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify_all.ps1
 optional; the script otherwise uses a sibling build directory so stale or
 permission-restricted in-tree build artifacts cannot invalidate verification.
 
-The script checks formatting; compiles and runs tests on wasm-gc, JavaScript,
-and native targets; runs CLI smoke tests and all examples; measures code and
+The script checks formatting; compiles and runs warning-free tests on wasm-gc,
+JavaScript, and native targets; runs CLI smoke tests and all examples; measures code and
 test counts; and lists the package contents. Every external process exit code
 is checked. Success ends with exactly:
 
@@ -34,8 +34,8 @@ gate:
 
 ```powershell
 moon fmt --check
-moon check --target wasm-gc
-moon test --target wasm-gc
+moon check --target wasm-gc --deny-warn
+moon test --target wasm-gc --deny-warn
 ```
 
 Run `verify_all.ps1` before release or publication because only the full gate

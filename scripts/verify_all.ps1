@@ -38,30 +38,30 @@ function Invoke-Checked {
 Invoke-Checked $Moon clean --target-dir $TargetDir
 Invoke-Checked $Moon fmt --check --target-dir $TargetDir
 
-Invoke-Checked $Moon check --target wasm-gc --target-dir $TargetDir
-Invoke-Checked $Moon test --target wasm-gc --target-dir $TargetDir
+Invoke-Checked $Moon check --target wasm-gc --deny-warn --target-dir $TargetDir
+Invoke-Checked $Moon test --target wasm-gc --deny-warn --target-dir $TargetDir
 
-Invoke-Checked $Moon check --target js --target-dir $TargetDir
-Invoke-Checked $Moon test --target js --target-dir $TargetDir
+Invoke-Checked $Moon check --target js --deny-warn --target-dir $TargetDir
+Invoke-Checked $Moon test --target js --deny-warn --target-dir $TargetDir
 
-Invoke-Checked $Moon check --target native --target-dir $TargetDir
-Invoke-Checked $Moon test --target native --target-dir $TargetDir
+Invoke-Checked $Moon check --target native --deny-warn --target-dir $TargetDir
+Invoke-Checked $Moon test --target native --deny-warn --target-dir $TargetDir
 
 # CLI smoke tests (input via --text; the CLI never opens files).
-Invoke-Checked $Moon run .\cmd\securitytxt-tool --target wasm-gc --target-dir $TargetDir -- version
-Invoke-Checked $Moon run .\cmd\securitytxt-tool --target wasm-gc --target-dir $TargetDir -- parse --text "Contact: mailto:a@example.com`nExpires: 2027-01-01T00:00:00Z`n"
-Invoke-Checked $Moon run .\cmd\securitytxt-tool --target wasm-gc --target-dir $TargetDir -- validate --text "Contact: mailto:a@example.com`nExpires: 2027-01-01T00:00:00Z`n"
-Invoke-Checked $Moon run .\cmd\securitytxt-tool --target wasm-gc --target-dir $TargetDir -- fresh --text "Contact: mailto:a@example.com`nExpires: 2027-01-01T00:00:00Z`n" --now 2026-08-13T00:00:00Z
-Invoke-Checked $Moon run .\cmd\securitytxt-tool --target wasm-gc --target-dir $TargetDir -- generate --contact "mailto:a@example.com" --expires 2027-01-01T00:00:00Z --policy "https://example.com/policy"
-Invoke-Checked $Moon run .\cmd\securitytxt-tool --target wasm-gc --target-dir $TargetDir -- audit --text "Contact: mailto:a@example.com`nExpires: 2027-01-01T00:00:00Z`n" --now 2026-08-13T00:00:00Z
-Invoke-Checked $Moon run .\cmd\securitytxt-tool --target wasm-gc --target-dir $TargetDir -- stats --text "Contact: mailto:a@example.com`nExpires: 2027-01-01T00:00:00Z`n"
+Invoke-Checked $Moon run ./cmd/securitytxt-tool --target wasm-gc --target-dir $TargetDir -- version
+Invoke-Checked $Moon run ./cmd/securitytxt-tool --target wasm-gc --target-dir $TargetDir -- parse --text "Contact: mailto:a@example.com`nExpires: 2027-01-01T00:00:00Z`n"
+Invoke-Checked $Moon run ./cmd/securitytxt-tool --target wasm-gc --target-dir $TargetDir -- validate --text "Contact: mailto:a@example.com`nExpires: 2027-01-01T00:00:00Z`n"
+Invoke-Checked $Moon run ./cmd/securitytxt-tool --target wasm-gc --target-dir $TargetDir -- fresh --text "Contact: mailto:a@example.com`nExpires: 2027-01-01T00:00:00Z`n" --now 2026-08-13T00:00:00Z
+Invoke-Checked $Moon run ./cmd/securitytxt-tool --target wasm-gc --target-dir $TargetDir -- generate --contact "mailto:a@example.com" --expires 2027-01-01T00:00:00Z --policy "https://example.com/policy"
+Invoke-Checked $Moon run ./cmd/securitytxt-tool --target wasm-gc --target-dir $TargetDir -- audit --text "Contact: mailto:a@example.com`nExpires: 2027-01-01T00:00:00Z`n" --now 2026-08-13T00:00:00Z
+Invoke-Checked $Moon run ./cmd/securitytxt-tool --target wasm-gc --target-dir $TargetDir -- stats --text "Contact: mailto:a@example.com`nExpires: 2027-01-01T00:00:00Z`n"
 
 # Examples.
-Invoke-Checked $Moon run .\examples\parse --target wasm-gc --target-dir $TargetDir
-Invoke-Checked $Moon run .\examples\validate --target wasm-gc --target-dir $TargetDir
-Invoke-Checked $Moon run .\examples\freshness --target wasm-gc --target-dir $TargetDir
-Invoke-Checked $Moon run .\examples\generate --target wasm-gc --target-dir $TargetDir
-Invoke-Checked $Moon run .\examples\audit --target wasm-gc --target-dir $TargetDir
+Invoke-Checked $Moon run ./examples/parse --target wasm-gc --target-dir $TargetDir
+Invoke-Checked $Moon run ./examples/validate --target wasm-gc --target-dir $TargetDir
+Invoke-Checked $Moon run ./examples/freshness --target wasm-gc --target-dir $TargetDir
+Invoke-Checked $Moon run ./examples/generate --target wasm-gc --target-dir $TargetDir
+Invoke-Checked $Moon run ./examples/audit --target wasm-gc --target-dir $TargetDir
 
 Invoke-Checked python .\scripts\count_code.py
 Invoke-Checked $Moon package --list --target-dir $TargetDir
